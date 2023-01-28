@@ -1,0 +1,52 @@
+Hungry Customer
+
+Money = 5.00
+vending_machine_content = { Doritos: 1.75, licorice: 2.25, smarties: 1.75, crunchie: 1.75}
+vending_inventory = { Doritos: 8, licorice: 6, smarties: 10, crunchie: 4}
+change = 0
+choice = ""
+
+Look at choices and price
+select choice
+if choice is not available, or if choice inventory is zero { 
+    error messager asking the customer to pick a new option
+}
+insert Money
+while money is less than cost { 
+    insert more money
+}
+gears turn to dispense item
+customer picks up item
+if money inserted is more than cost { 
+    return change to customer
+}
+update vending_inventory
+
+
+
+
+
+Machine Owner
+
+vending_change = 25.00
+vending_machine_location = school
+vending_machine_content_pricing = { Doritos: 1.75, licorice: 2.25, smarties: 1.75, crunchie: 1.75}
+vending_inventory = { Doritos: 8, licorice: 6, smarties: 10, crunchie: 4}
+
+Take vending machine to school and plug in
+fill vending_inventory with purchased items 
+update vending_inventory with current contents
+fill vending_change with coins
+update vending_machine_content_pricing
+customer inserts money and makes selection
+if money inserted is less than cost of item { 
+    promp customer to insert more money
+}
+if money inserted is equal to or more than item {
+    dispense item
+} 
+if money is more than item purchased{
+    dispense appropriate change
+}
+update vending_inventory
+
